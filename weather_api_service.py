@@ -29,7 +29,7 @@ class Weather(NamedTuple):
     weather_type: WeatherType
     sunrise: datetime
     sunset: datetime
-    city: str
+
 
 
 def get_weather(coordinates: Coordinates) -> Weather:
@@ -58,7 +58,6 @@ def _parse_openweather_response(openweather_response: str) -> Weather:
         weather_type=_parse_weather_type(openweather_dict),
         sunrise=_parse_sun_time(openweather_dict, 'sunrise'),
         sunset=_parse_sun_time(openweather_dict, 'sunset'),
-        city='Moscow'
     )
 
 

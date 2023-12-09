@@ -5,6 +5,7 @@ from exceptions import ApiServiceError, CantGet
 
 
 def main():
+
     try:
         coordinates = get_coordinates()
     except CantGet:
